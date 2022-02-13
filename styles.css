@@ -59,7 +59,8 @@ a {
     text-align: center;
 }
 
-i {
+i,
+.grid-container-social-media-links a {
     text-align: center;
     color: #90caf9;
 }
