@@ -30,6 +30,7 @@ a {
     background-image: url('images/pexels-pixabay-163142.jpg');
     height: 100vh;
     min-height: 600px;
+    max-height: 900px;
 }
 
 .section-two {
