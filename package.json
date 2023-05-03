@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "cp src/index.html build/index.html && cp src/CNAME build/CNAME && npx tailwindcss -o build/styles.css --minify",
+    "build": "cp src/index.html build/index.html && cp src/CNAME build/CNAME && cp -r src/images build/images && npx tailwindcss -o build/styles.css --minify",
+    "clean" : "rm -rf build/*",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
