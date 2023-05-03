@@ -1,0 +1,16 @@
+{
+  "name": "cole-gannaway.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch" : "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build" : "cp src/index.html docs/index.html && npx tailwindcss -o docs/build.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
