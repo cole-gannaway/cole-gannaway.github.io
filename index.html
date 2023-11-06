@@ -18,7 +18,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="images/cole-headshot-w-background.jpeg" />
     <link href="native-css-styles.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +32,8 @@
 </head>
 
 <body>
-    <!-- White background sections -->
-    <div>
+    <!-- Gray background sections -->
+    <div class="from-gray-800 to-gray-400 bg-gradient-to-br text-white">
         <div class="custom-center-content-container">
             <div class="mx-10">
                 <!-- Intro -->
@@ -68,7 +68,7 @@
                                         <img class="w-10 h-10 mr-2" src="images/linkedin-icon.svg">
                                     </a>
                                     <a href="https://github.com/cole-gannaway">
-                                        <img class="w-10 h-10 mx-2" src="images/github-icon.svg">
+                                        <img class="w-10 h-10 mx-2" src="images/github-icon.svg" style="fill: blueviolet;">
                                     </a>
                                     <a href="https://www.facebook.com/cole.gannaway">
                                         <img class="w-10 h-10 mx-2" src="images/facebook-icon.svg">
@@ -77,10 +77,17 @@
                             </div>
                         </div>
                     </div>
-                            
                 </section>
+                <div class="border-2 border-transparent m-auto"></div>
 
-                <div class="border-2 border-gray-950 m-auto"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- White background sections -->
+    <div>
+        <div class="custom-center-content-container">
+            <div class="mx-10">
 
                 <!-- Projects -->
                 <section id="projects-section">
@@ -392,7 +399,7 @@
                             <img class="w-10 h-10 m-auto mx-2" src="images/linkedin-icon.svg">
                         </a>
                         <a href="https://github.com/cole-gannaway">
-                            <img class="w-10 h-10 m-auto mx-2" src="images/github-icon.svg" style="filter: brightness(0) invert(1);">
+                            <img class="w-10 h-10 m-auto mx-2" src="images/github-icon.svg" style="fill: blueviolet;">
                         </a>
                         <a href="https://www.facebook.com/cole.gannaway">
                             <img class="w-10 h-10 m-auto mx-2" src="images/facebook-icon.svg">
