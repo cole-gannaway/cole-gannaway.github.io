@@ -39,34 +39,27 @@
             <div class="mx-10">
                 <!-- Intro -->
                 <section id="intro-section">
-                    <div data-aos="zoom-in">
+                    <div>
                         <div class="text-center text-white">
-                            <div class="py-8">
-                                <h2 class="text-4xl font-extrabold tracking-wide">Cole Gannaway</h2>
-                                <div class="mx-auto w-80 border-gray-200 border-opacity-5 backdrop-blur-md border-4 rounded-full">
-                                    <img class="w-80 aspect-square rounded-full" src="images/cole-headshot-newest.png">
+                            <div class="">
+                                <div class="py-8"></div>
+                                <div data-aos="zoom-in" class="mx-auto w-64 border-gray-200 border-opacity-5 backdrop-blur-md border-8 rounded-full md:w-80">
+                                    <img class="w-64 aspect-square rounded-full md:w-80" src="images/cole-headshot-newest.png">
                                 </div>
-                                <h3 class="font-bold my-2 text-center tracking-wide md:text-xl">Software Engineer / Sales Engineer</h3>
-                                <p class="md:text-xl">
-                                    5 years experience in software development and IT.<br>
-                                    Based in Austin, TX.<br>
-                                    Get in touch for availability.</p>
-                                <div class="my-4 flex flex-auto justify-center">
-                                    <a href="https://www.linkedin.com/in/cole-gannaway">
-                                        <img class="w-10 h-10 mr-2" src="images/linkedin-icon.svg">
-                                    </a>
-                                    <a href="https://github.com/cole-gannaway">
-                                        <img class="w-10 h-10 mx-2" src="images/github-icon.svg" style="filter: brightness(0) invert(1);">
-                                    </a>
-                                    <a href="https://www.facebook.com/cole.gannaway">
-                                        <img class="w-10 h-10 mx-2" src="images/facebook-icon.svg">
-                                    </a>
+                                <h2 id="my-name-title" class="font-extrabold text-2xl uppercase mb-2">
+                                    Cole Gannaway
+                                </h2>
+                                <div id="software-engineer-title" class="font-bold text-xl mb-4">Software Engineer</div>
+                                <div id="sales-engineer-title" class="font-bold text-xl mb-4 hidden">Sales Engineer</div>
+                                <div id="tagline-text" class="italic md:text-xl">
+                                    I solve the most complex challenges by architecting world class <span class="font-extrabold">software</span> and <span class="font-extrabold">IT</span> solutions.
                                 </div>
                             </div>
                         </div>
                     </div>  
                 </section>
             </div>
+            <img id="scroll-down-svg" class="w-16 p-4 aspect-square absolute bottom-0 left-1/2 -translate-x-8 -translate-y-1/2" src="images/scroll-down-double-arrow.svg" alt="scroll down arrow">
         </div>
     </div>
     <!-- White background sections -->
@@ -75,7 +68,8 @@
             <div class="mx-10">
                 <!-- Projects -->
                 <section id="projects-section">
-        
+                    <h2 data-aos="zoom-in" class="text-3xl text-center tracking-widest py-2 md:text-4xl md:py-10" >Projects</h2>
+                    <div class="border-b border-gray-400 m-auto"></div>
                     <!-- P1 -->
                     <div data-aos="fade-right" class="my-4 md:grid md:grid-cols-3 md:gap-8">
                         <div class="md:col-span-1 md:mt-auto md:mb-auto md:mr-auto">
@@ -402,7 +396,92 @@
         AOS.init({
             duration: 1000, // values from 0 to 3000, with step 50ms
         });
-      </script>
+    </script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        var tl = gsap.timeline({delay: 0.5});
+        const myText = new SplitType('#my-name-title')
+        const myText2 = new SplitType('#software-engineer-title')
+        const myText3 = new SplitType('#sales-engineer-title')
+        const myText4 = new SplitType('#tagline-text')
+        tl.to('#my-name-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+        tl.to('#software-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        tl.to('#tagline-text .char', {
+            opacity: 1,
+            stagger: 0.05,
+            delay: 0.005,
+            duration: 0.005,
+        })
+        
+        tl.call(startSecondTimeline);
+        tl.call(startThirdTimeline);
+        tl.call(startFourthTimeline);
+
+
+        // new timeline
+        var tl2 = gsap.timeline({paused: true, repeat: -1});
+        tl2.to('#software-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#sales-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#software-engineer-title", {display:"none", duration: 0})
+            .to("#sales-engineer-title", {display:"block", duration: 0})
+        tl2.to('#sales-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        tl2.to('#sales-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#software-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#sales-engineer-title", {display:"none", duration: 0})
+            .to("#software-engineer-title", {display:"block", duration: 0})
+        tl2.to('#software-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        var tl3 = gsap.timeline({paused: true});
+        tl3.to('#scroll-down-svg', {
+            opacity: 1
+        })
+
+        var tl4 = gsap.timeline({paused: true, repeat: -1});
+        tl4.to('#scroll-down-svg', {
+            y: "50%",
+            opacity: 1,
+            duration: 1
+        })
+        tl4.to('#scroll-down-svg', {
+            y: 0,
+            opacity: 1,
+            duration: 1
+        })
+
+        // Function to start the second timeline
+        function startSecondTimeline() {
+            tl2.play();
+        }
+        function startThirdTimeline(){
+            tl3.play();
+        }
+        function startFourthTimeline(){
+            tl4.play();
+        }
+    </script>
 </body>
 
 </html>
