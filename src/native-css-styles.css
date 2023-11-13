@@ -31,3 +31,16 @@
 #nav1 {
     transition: all 0.4s;
 }
+
+#gallery .gallery-item {
+    animation: animateSomething 15s infinite linear;
+}
+
+@keyframes animateSomething {
+    0% {
+        
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
