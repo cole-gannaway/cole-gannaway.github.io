@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth scroll-pt-16">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,7 +31,32 @@
     <link rel="apple-touch-icon" href="images/cole-headshot-w-background.jpeg" />
 </head>
 
-<body>
+<body onload="setNavBar()">
+    <!-- mobile -->
+    <nav id="nav1" class="md:hidden fixed w-full text-white z-10">
+        <div class="absolute text-xl top-6 left-1/2 -translate-x-20 font-bold italic tracking-wide">Cole Gannaway</div>
+        <button class="inline-block float-right w-16 p-4" onclick="toggleMobileNavBarMenu()">
+            <img src="images/Hamburger_icon.svg" alt="">
+        </button>
+    </nav>
+    <!-- non mobile -->
+    <nav id="nav2" class="hidden fixed w-full text-white z-10 p-4 md:block">
+        <div class="float-left text-xl font-bold italic tracking-wide ml-10 md:ml-20">Cole Gannaway</div>
+        <div class="float-right text-xl mr-10 md:mr-20">
+            <a class="px-2 italic" href="#">Home</a>
+            <a class="px-2 italic" href="#projects-section">Projects</a>
+            <a class="px-2 italic" href="#about-section">About Me</a>
+            <a class="px-2 italic" href="#experience-section">Experience</a>
+        </div>
+    </nav>
+    <nav id="mobileNavBarMenu" class="fixed right-0 left-0 bottom-0 top-0 text-white text-xl z-20" style="background-color: rgba(0, 0, 0, 0.9);" hidden="true">
+        <ul class="block py-10 text-center text-xl my-auto">
+            <li><a class="block px-2 py-2 italic" href="#" onclick="toggleMobileNavBarMenu()">Home</a></li>
+            <li><a class="block px-2 py-2 italic" href="#projects-section" onclick="toggleMobileNavBarMenu()">Projects</a></li>
+            <li><a class="block px-2 py-2 italic" href="#about-section" onclick="toggleMobileNavBarMenu()">About Me</a></li>
+            <li><a class="block px-2 py-2 italic" href="#experience-section" onclick="toggleMobileNavBarMenu()">Experience</a></li>
+        </ul>
+    </nav>
     <!-- Parallax background sections -->
     <div class="h-screen overflow-hidden">
         <img class="fixed top-0 left-0 -z-10 w-auto min-w-full min-h-full max-w-none" src="images/background-img.png">
@@ -46,20 +71,18 @@
                                 <div data-aos="zoom-in" class="mx-auto w-64 border-gray-200 border-opacity-5 backdrop-blur-md border-8 rounded-full md:w-80">
                                     <img class="w-64 aspect-square rounded-full md:w-80" src="images/cole-headshot-newest.png">
                                 </div>
-                                <h2 id="my-name-title" class="font-extrabold text-2xl uppercase mb-2">
-                                    Cole Gannaway
-                                </h2>
+                                
                                 <div id="software-engineer-title" class="font-bold text-xl mb-4">Software Engineer</div>
                                 <div id="sales-engineer-title" class="font-bold text-xl mb-4 hidden">Sales Engineer</div>
                                 <div id="tagline-text" class="italic md:text-xl">
-                                    I solve the most complex business challenges by architecting world class software and IT solutions.
+                                    I solve the most complex challenges by architecting world class <span class="font-extrabold">software</span> and <span class="font-extrabold">IT</span> solutions.
                                 </div>
                             </div>
                         </div>
                     </div>  
                 </section>
             </div>
-            <img id="scroll-down-svg" class="w-16 p-4 aspect-square absolute bottom-0 left-1/2 -translate-x-8 -translate-y-1/2" src="images/scroll-down-double-arrow.svg" alt="scroll down arrow">
+            <a href="#projects-section"><img id="scroll-down-svg" class="w-16 p-4 aspect-square absolute bottom-0 left-1/2 -translate-x-8 -translate-y-1/2" src="images/scroll-down-double-arrow.svg" alt="scroll down arrow"></a>
         </div>
     </div>
     <!-- White background sections -->
@@ -262,7 +285,7 @@
                             </a>
                         </div>
                     </div>
-
+                    <div class="h-10"></div>
                 </section>
 
             </div>
@@ -401,16 +424,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         var tl = gsap.timeline({delay: 0.5});
-        const myText = new SplitType('#my-name-title')
         const myText2 = new SplitType('#software-engineer-title')
         const myText3 = new SplitType('#sales-engineer-title')
         const myText4 = new SplitType('#tagline-text')
-        tl.to('#my-name-title .char', {
-            y: 0,
-            stagger: 0.05,
-            delay: 0.2,
-            duration: .1,
-        })
         tl.to('#software-engineer-title .char', {
             y: 0,
             stagger: 0.05,
@@ -481,6 +497,48 @@
         function startFourthTimeline(){
             tl4.play();
         }
+    </script>
+    <script>
+        var isAtTop = true;
+        function setNavBar(){
+            var scrollPosition = window.scrollY;
+            if (isAtTop && scrollPosition > 20){
+                isAtTop = false;
+                document.getElementById("nav1").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                document.getElementById("nav2").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+            } else if (!isAtTop && scrollPosition <= 20) {
+                isAtTop = true;
+                document.getElementById("nav1").style.backgroundColor = "transparent";
+                document.getElementById("nav2").style.backgroundColor = "transparent";
+            }
+        }
+
+        var isMobileNavBarMenuOpen = false;
+        function toggleMobileNavBarMenu(){
+            console.log(document.getElementById("mobileNavBarMenu").hidden)
+            console.log(isMobileNavBarMenuOpen)
+            if (isMobileNavBarMenuOpen) {
+                // close it
+                document.getElementById("mobileNavBarMenu").hidden = true;
+                isMobileNavBarMenuOpen = false;
+            }
+            else {
+                // open it
+                document.getElementById("mobileNavBarMenu").hidden = false;
+                isMobileNavBarMenuOpen = true;
+            }
+            
+
+        }
+
+        // Attach the function to the 'scroll' event
+        window.addEventListener("scroll", setNavBar);
+        const arr = document.getElementById("mobileNavBarMenu").getElementsByTagName("a")
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            element.onclick = toggleMobileNavBarMenu;
+        }
+        
     </script>
 </body>
 
