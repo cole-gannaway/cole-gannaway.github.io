@@ -7,6 +7,7 @@
     "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "cp -r src/* build && rm build/input.css && npx tailwindcss -o build/styles.css --minify && node replace.js",
     "clean": "rm -rf build/*",
+    "predeploy" : "npm run build",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
