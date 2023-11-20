@@ -168,7 +168,11 @@
             <div class="mx-10">
                 <!-- Projects -->
                 <section id="projects-section">
-                    <h2 data-aos="zoom-in" class="text-3xl text-center tracking-widest py-2 md:text-4xl md:py-10" >Projects</h2>
+                    <div class="py-4 md:py-10">
+                        <h1 id="projects-section-title" class="text-4xl py-1 text-center font-bold md:text-5xl">
+                            Projects
+                        </h1>
+                    </div>
                     <div class="border-b border-gray-400 m-auto"></div>
                     <!-- P1 -->
                     <div data-aos="fade-right" class="my-4 md:grid md:grid-cols-3 md:gap-8">
@@ -505,6 +509,7 @@
         const myText2 = new SplitType('#software-engineer-title')
         const myText3 = new SplitType('#sales-engineer-title')
         const myText4 = new SplitType('#tagline-text')
+        const myText5 = new SplitType('#projects-section-title')
         tl.to('#software-engineer-title .char', {
             y: 0,
             stagger: 0.05,
@@ -564,6 +569,21 @@
             opacity: 1,
             duration: 1
         })
+
+        var tl5 = gsap.timeline({repeat: -1});
+        tl5.to('#projects-section-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+        .to('#projects-section-title .char', {y:"-200%", duration: 1, delay: 2})
+        .to('#projects-section-title .char', {opacity: 0, duration: 0.1})
+        .to('#projects-section-title .char', {y:"100%", duration: 0})
+        .to('#projects-section-title .char', {y:"100%", duration: 0.5})
+
+
+
 
         // Function to start the second timeline
         function startSecondTimeline() {
