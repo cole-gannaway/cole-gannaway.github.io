@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth scroll-pt-16">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -16,7 +16,7 @@
     </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta charset="utf-8" />
-    <link rel="icon" href="images/cole-headshot-w-background.jpeg" />
+    <link rel="icon" href="images/alabama-logo.svg" />
     <link href="native-css-styles.css" rel="stylesheet">
     <link href="../dist/output.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -25,66 +25,151 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description"
         content="Cole Gannaway's personal website displaying his professional work experience, social media links, and personal projects. Enjoy!" />
-    <meta property="og:image" content="https://www.colegannaway.com/images/cole-headshot-w-background.jpeg">
+    <meta property="og:image" content="https://www.colegannaway.com/images/cole-website-preview.png">
     <meta property="og:description"
         content="Cole Gannaway's personal website displaying his professional work experience, social media links, and personal projects. Enjoy!">
-    <link rel="apple-touch-icon" href="images/cole-headshot-w-background.jpeg" />
+    <link rel="apple-touch-icon" href="images/cole-website-pre view.png" />
 </head>
 
-<body>
-    <!-- White background sections -->
-    <div>
+<body onload="setNavBar()">
+    <!-- mobile -->
+    <nav id="nav1" class="md:hidden fixed w-full text-white z-10">
+        <div class="absolute text-xl top-6 left-1/2 -translate-x-20 font-bold italic tracking-wide">Cole Gannaway</div>
+        <button class="inline-block float-right w-16 p-4" onclick="toggleMobileNavBarMenu()">
+            <img src="images/Hamburger_icon.svg" alt="">
+        </button>
+    </nav>
+    <!-- non mobile -->
+    <nav id="nav2" class="hidden fixed w-full text-white z-10 p-4 md:block">
+        <div class="float-left text-xl font-bold italic tracking-wide ml-10 md:ml-20">Cole Gannaway</div>
+        <div class="float-right text-xl mr-10 md:mr-20">
+            <a class="px-2 italic" href="#">Home</a>
+            <a class="px-2 italic" href="#projects-section">Projects</a>
+            <a class="px-2 italic" href="#about-section">About Me</a>
+            <a class="px-2 italic" href="#experience-section">Experience</a>
+        </div>
+    </nav>
+    <nav id="mobileNavBarMenu" class="fixed right-0 left-0 bottom-0 top-0 text-white text-xl z-20" style="background-color: rgba(0, 0, 0, 0.9);" hidden="true">
+        <ul class="block py-10 text-center text-xl my-auto">
+            <li><a class="block px-2 py-2 italic" href="#" onclick="toggleMobileNavBarMenu()">Home</a></li>
+            <li><a class="block px-2 py-2 italic" href="#projects-section" onclick="toggleMobileNavBarMenu()">Projects</a></li>
+            <li><a class="block px-2 py-2 italic" href="#about-section" onclick="toggleMobileNavBarMenu()">About Me</a></li>
+            <li><a class="block px-2 py-2 italic" href="#experience-section" onclick="toggleMobileNavBarMenu()">Experience</a></li>
+        </ul>
+    </nav>
+    <!-- Parallax background sections -->
+    <div class="h-screen overflow-hidden">
+        <img class="fixed top-0 left-0 -z-10 w-auto min-w-full min-h-full max-w-none" src="images/background-img.png">
         <div class="custom-center-content-container">
             <div class="mx-10">
                 <!-- Intro -->
                 <section id="intro-section">
-                    <div data-aos="zoom-in">
-                        <div class="h-8"></div>
-                        <div class="my-2 md:grid grid-rows-1 grid-cols-2 grid-flow-row gap-4">
-                            <div>
-                                <h1 class="text-3xl font-bold text-center md:text-7xl md:text-left xl:text-8xl">Cole
-                                    <br>Gannaway
-                                </h1>
-                            </div>
-                            <div>
-                                <img class="hidden w-40 md:block xl:w-60" src="images/cole-headshot.png">
-                            </div>
-                        </div>
-                        <div class="text-center md:text-left md:grid grid-rows-1 grid-cols-2 grid-flow-row gap-4">
-                            <!-- get this to NOT be side by side on small screens -->
-                            <div class="my-2">
-                                <a class="underline md:text-xl" href="mailto:cole.gannaway@gmail.com">cole.gannaway@gmail.com</a>
-                                <img class="w-40 m-auto md:hidden" src="images/cole-headshot.png">
-                                <h3 class="font-bold my-2 text-center md:text-xl md:text-left">/Software Engineer</h3>
-                                <h3 class="font-bold text-center md:text-xl md:text-left">/IT Solutions Engineer</h3>
-                            </div>
-                            <div class="my-2">
-                                <p class="md:text-xl">
-                                    5 years experience in software development and IT.<br>
-                                    Based in Austin, TX.<br>
-                                    Get in touch for availability.</p>
-                                <div class="my-4 flex flex-auto justify-center md:justify-normal">
-                                    <a href="https://www.linkedin.com/in/cole-gannaway">
-                                        <img class="w-10 h-10 mr-2" src="images/linkedin-icon.svg">
-                                    </a>
-                                    <a href="https://github.com/cole-gannaway">
-                                        <img class="w-10 h-10 mx-2" src="images/github-icon.svg">
-                                    </a>
-                                    <a href="https://www.facebook.com/cole.gannaway">
-                                        <img class="w-10 h-10 mx-2" src="images/facebook-icon.svg">
-                                    </a>
+                    <div>
+                        <div class="text-center text-white">
+                            <div class="">
+                                <div class="py-8"></div>
+                                <div data-aos="zoom-in" class="mx-auto w-64 border-gray-200 border-opacity-5 backdrop-blur-md border-8 rounded-full md:w-80">
+                                    <img class="w-64 aspect-square rounded-full md:w-80" src="images/cole-headshot.jpeg">
+                                </div>
+                                
+                                <div id="software-engineer-title" class="font-bold text-xl mb-4">Software Engineer</div>
+                                <div id="sales-engineer-title" class="font-bold text-xl mb-4 hidden">Sales Engineer</div>
+                                <div id="tagline-text" class="italic md:text-xl">
+                                    I solve the most complex challenges by architecting world class <span class="font-extrabold">software</span> and <span class="font-extrabold">IT</span> solutions.
                                 </div>
                             </div>
                         </div>
-                    </div>
-                            
+                    </div>  
                 </section>
+            </div>
+            <a href="#projects-section"><img id="scroll-down-svg" class="w-16 p-4 aspect-square absolute bottom-0 left-1/2 -translate-x-8 -translate-y-1/2" src="images/scroll-down-double-arrow.svg" alt="scroll down arrow"></a>
+        </div>
+    </div>
+    <!-- Horizontal Gallery Container -->
+    <div id="gallery" class="flex overflow-x-auto whitespace-no-wrap scroll-snap-type-x snap-center py-4" style="background-color: rgba(50, 50, 50, 0.5);">
+        <!-- Gallery Items -->
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Lockheed-Martin-logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg" src="images/AWS-Certified-Solutions-Architect-Associate_badge.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <div class="h-20 rounded-lg bg-white">
+                <img class="h-full p-2" src="images/SHI-logo.png" alt="">
+            </div>
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/Comptia-Security-Plus-2.svg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Fast_Enterprises_LLC_logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/azure-solutions-architect-expert.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/PSM-1.png" alt="">
+        </div>
+       
+        <!-- Repeat for effect -->
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Lockheed-Martin-logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg" src="images/AWS-Certified-Solutions-Architect-Associate_badge.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <div class="h-20 rounded-lg bg-white">
+                <img class="h-full p-2" src="images/SHI-logo.png" alt="">
+            </div>
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/Comptia-Security-Plus-2.svg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Fast_Enterprises_LLC_logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/azure-solutions-architect-expert.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/PSM-1.png" alt="">
+        </div>
 
-                <div class="border-2 border-gray-950 m-auto"></div>
-
+        <!-- Repeat again for big screens -->
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Lockheed-Martin-logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg" src="images/AWS-Certified-Solutions-Architect-Associate_badge.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <div class="h-20 rounded-lg bg-white">
+                <img class="h-full p-2" src="images/SHI-logo.png" alt="">
+            </div>
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/Comptia-Security-Plus-2.svg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg bg-white" src="images/Fast_Enterprises_LLC_logo.jpg" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/azure-solutions-architect-expert.png" alt="">
+        </div>
+        <div class="gallery-item flex-shrink-0 mr-4 items-center justify-center">
+            <img class="h-20 rounded-lg " src="images/PSM-1.png" alt="">
+        </div>
+    </div>
+    <!-- White background sections -->
+    <div class="bg-white">
+        <div class="custom-center-content-container">
+            <div class="mx-10">
                 <!-- Projects -->
                 <section id="projects-section">
-        
+                    <h2 data-aos="zoom-in" class="text-3xl text-center tracking-widest py-2 md:text-4xl md:py-10" >Projects</h2>
+                    <div class="border-b border-gray-400 m-auto"></div>
                     <!-- P1 -->
                     <div data-aos="fade-right" class="my-4 md:grid md:grid-cols-3 md:gap-8">
                         <div class="md:col-span-1 md:mt-auto md:mb-auto md:mr-auto">
@@ -277,7 +362,7 @@
                             </a>
                         </div>
                     </div>
-
+                    <div class="h-10"></div>
                 </section>
 
             </div>
@@ -299,15 +384,16 @@
                         <img data-aos="fade-left" class="m-auto w-20 h-20  md:w-40 md:h-40 "
                             src="images/PSM-1.png">
                     </div>
-                    <p data-aos="zoom-in" class="text-sm my-4 md:text-xl md:my-10">I'm a unique talent, possessing excellent
-                        technical and non-technical skills. I thrive in
-                        customer-facing, team environments that allow me to communicate, lead, and design highly scalable
-                        solutions that exceed customer expectations.
-                        <br>
-                        <br>
+                    <p data-aos="zoom-in" class="text-sm my-4 md:text-xl md:my-10">
                         As a software engineer, I developed highly scalable, full-stack web
                         applications. As a solutions engineer, I architected data center hardware and multi-cloud
                         environments for business continuity and scalability.
+                        <br>
+                        <br>
+                        I'm a unique talent, possessing excellent
+                        technical and non-technical skills. I thrive in
+                        customer-facing, team environments that allow me to communicate, lead, and design highly scalable
+                        solutions that exceed customer expectations.
                     </p>
                 </section>
                 
@@ -411,7 +497,127 @@
         AOS.init({
             duration: 1000, // values from 0 to 3000, with step 50ms
         });
-      </script>
+    </script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        var tl = gsap.timeline({delay: 0.5});
+        const myText2 = new SplitType('#software-engineer-title')
+        const myText3 = new SplitType('#sales-engineer-title')
+        const myText4 = new SplitType('#tagline-text')
+        tl.to('#software-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        tl.to('#tagline-text .char', {
+            opacity: 1,
+            stagger: 0.05,
+            delay: 0.005,
+            duration: 0.005,
+        })
+        
+        tl.call(startSecondTimeline);
+        tl.call(startThirdTimeline);
+        tl.call(startFourthTimeline);
+
+
+        // new timeline
+        var tl2 = gsap.timeline({paused: true, repeat: -1});
+        tl2.to('#software-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#sales-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#software-engineer-title", {display:"none", duration: 0})
+            .to("#sales-engineer-title", {display:"block", duration: 0})
+        tl2.to('#sales-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        tl2.to('#sales-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#software-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#sales-engineer-title", {display:"none", duration: 0})
+            .to("#software-engineer-title", {display:"block", duration: 0})
+        tl2.to('#software-engineer-title .char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1,
+        })
+
+        var tl3 = gsap.timeline({paused: true});
+        tl3.to('#scroll-down-svg', {
+            opacity: 1
+        })
+
+        var tl4 = gsap.timeline({paused: true, repeat: -1});
+        tl4.to('#scroll-down-svg', {
+            y: "50%",
+            opacity: 1,
+            duration: 1
+        })
+        tl4.to('#scroll-down-svg', {
+            y: 0,
+            opacity: 1,
+            duration: 1
+        })
+
+        // Function to start the second timeline
+        function startSecondTimeline() {
+            tl2.play();
+        }
+        function startThirdTimeline(){
+            tl3.play();
+        }
+        function startFourthTimeline(){
+            tl4.play();
+        }
+    </script>
+    <script>
+        var isAtTop = true;
+        function setNavBar(){
+            var scrollPosition = window.scrollY;
+            if (isAtTop && scrollPosition > 20){
+                isAtTop = false;
+                document.getElementById("nav1").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                document.getElementById("nav2").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+            } else if (!isAtTop && scrollPosition <= 20) {
+                isAtTop = true;
+                document.getElementById("nav1").style.backgroundColor = "transparent";
+                document.getElementById("nav2").style.backgroundColor = "transparent";
+            }
+        }
+
+        var isMobileNavBarMenuOpen = false;
+        function toggleMobileNavBarMenu(){
+            console.log(document.getElementById("mobileNavBarMenu").hidden)
+            console.log(isMobileNavBarMenuOpen)
+            if (isMobileNavBarMenuOpen) {
+                // close it
+                document.getElementById("mobileNavBarMenu").hidden = true;
+                isMobileNavBarMenuOpen = false;
+            }
+            else {
+                // open it
+                document.getElementById("mobileNavBarMenu").hidden = false;
+                isMobileNavBarMenuOpen = true;
+            }
+            
+
+        }
+
+        // Attach the function to the 'scroll' event
+        window.addEventListener("scroll", setNavBar);
+        const arr = document.getElementById("mobileNavBarMenu").getElementsByTagName("a")
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            element.onclick = toggleMobileNavBarMenu;
+        }
+        
+    </script>
 </body>
 
 </html>
