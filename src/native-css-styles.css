@@ -2,7 +2,7 @@
     max-width: 1500px; margin: auto;
 }
 
-#my-name-title {
+#projects-section-title {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -24,7 +24,7 @@
     opacity: 0;
 }
 
-#my-name-title .char, #software-engineer-title .char, #sales-engineer-title .char {
+#software-engineer-title .char, #sales-engineer-title .char, #projects-section-title .char {
     transform: translateY(100%);
     transition: transform .5s;
 }
