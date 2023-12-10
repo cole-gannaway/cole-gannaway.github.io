@@ -1,3 +1,6 @@
+* {
+    font: 'Inter',sans-serif;
+}
 .custom-center-content-container{
     max-width: 1500px; margin: auto;
 }

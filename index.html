@@ -28,33 +28,33 @@
     <meta property="og:image" content="https://www.colegannaway.com/images/cole-website-preview.png">
     <meta property="og:description"
         content="Cole Gannaway's personal website displaying his professional work experience, social media links, and personal projects. Enjoy!">
-    <link rel="apple-touch-icon" href="images/cole-website-pre view.png" />
+    <link rel="apple-touch-icon" href="images/cole-website-preview.png" />
 </head>
 
 <body onload="setNavBar()">
     <!-- mobile -->
     <nav id="nav1" class="md:hidden fixed w-full text-white z-10">
-        <div class="absolute text-xl top-6 left-1/2 -translate-x-20 font-bold italic tracking-wide">Cole Gannaway</div>
+        <div class="absolute text-xl top-6 left-1/2 -translate-x-20 font-bold tracking-wide">Cole Gannaway</div>
         <button class="inline-block float-right w-16 p-4" onclick="toggleMobileNavBarMenu()">
             <img src="images/Hamburger_icon.svg" alt="">
         </button>
     </nav>
     <!-- non mobile -->
     <nav id="nav2" class="hidden fixed w-full text-white z-10 p-4 md:block">
-        <div class="float-left text-xl font-bold italic tracking-wide ml-10 md:ml-20">Cole Gannaway</div>
+        <div class="float-left text-xl font-bold tracking-wide ml-10 md:ml-20">Cole Gannaway</div>
         <div class="float-right text-xl mr-10 md:mr-20">
-            <a class="px-2 italic" href="#">Home</a>
-            <a class="px-2 italic" href="#projects-section">Projects</a>
-            <a class="px-2 italic" href="#about-section">About Me</a>
-            <a class="px-2 italic" href="#experience-section">Experience</a>
+            <a class="px-2" href="#">Home</a>
+            <a class="px-2" href="#projects-section">Projects</a>
+            <a class="px-2" href="#about-section">About Me</a>
+            <a class="px-2" href="#experience-section">Experience</a>
         </div>
     </nav>
     <nav id="mobileNavBarMenu" class="fixed right-0 left-0 bottom-0 top-0 text-white text-xl z-20" style="background-color: rgba(0, 0, 0, 0.9);" hidden="true">
         <ul class="block py-10 text-center text-xl my-auto">
-            <li><a class="block px-2 py-2 italic" href="#" onclick="toggleMobileNavBarMenu()">Home</a></li>
-            <li><a class="block px-2 py-2 italic" href="#projects-section" onclick="toggleMobileNavBarMenu()">Projects</a></li>
-            <li><a class="block px-2 py-2 italic" href="#about-section" onclick="toggleMobileNavBarMenu()">About Me</a></li>
-            <li><a class="block px-2 py-2 italic" href="#experience-section" onclick="toggleMobileNavBarMenu()">Experience</a></li>
+            <li><a class="block px-2 py-2" href="#" onclick="toggleMobileNavBarMenu()">Home</a></li>
+            <li><a class="block px-2 py-2" href="#projects-section" onclick="toggleMobileNavBarMenu()">Projects</a></li>
+            <li><a class="block px-2 py-2" href="#about-section" onclick="toggleMobileNavBarMenu()">About Me</a></li>
+            <li><a class="block px-2 py-2" href="#experience-section" onclick="toggleMobileNavBarMenu()">Experience</a></li>
         </ul>
     </nav>
     <!-- Parallax background sections -->
@@ -64,14 +64,14 @@
             <div class="mx-10">
                 <!-- Intro -->
                 <section id="intro-section">
-                    <div>
                         <div class="text-center text-white">
                             <div class="">
-                                <div class="py-8"></div>
-                                <div data-aos="zoom-in" class="mx-auto w-64 border-gray-200 border-opacity-5 backdrop-blur-md border-8 rounded-full md:w-80">
-                                    <img class="w-64 aspect-square rounded-full md:w-80" src="images/cole-headshot.jpeg">
+                                <div class="py-8 md:py-10"></div>
+                                <div>
+                                    <div data-aos="zoom-in" class="mx-auto w-64 border-gray-200 border-opacity-5 backdrop-blur-md border-8 rounded-full md:w-96">
+                                        <img class="w-64 aspect-square rounded-full md:w-96" src="images/cole-headshot.jpeg">
+                                    </div>
                                 </div>
-                                
                                 <div id="software-engineer-title" class="font-bold text-xl mb-4">Software Engineer</div>
                                 <div id="sales-engineer-title" class="font-bold text-xl mb-4 hidden">Sales Engineer</div>
                                 <div id="tagline-text" class="italic md:text-xl">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </section>
             </div>
             <a href="#projects-section"><img id="scroll-down-svg" class="w-16 p-4 aspect-square absolute bottom-0 left-1/2 -translate-x-8 -translate-y-1/2" src="images/scroll-down-double-arrow.svg" alt="scroll down arrow"></a>
