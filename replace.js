@@ -1,7 +1,7 @@
 const replace = require('replace-in-file');
 
 const options = {
-  files: 'build/index.html',
+  files: ['build/index.html', 'build/ai.html'],
   from: '../dist/output.css', // The text you want to replace
   to: 'styles.css', // The replacement text
 };
