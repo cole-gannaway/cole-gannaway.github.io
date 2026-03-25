@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="scroll-smooth scroll-pt-16">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/alabama-logo.svg" />
+    <link href="native-css-styles.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+        content="Cole Gannaway's personal website displaying his professional work experience, social media links, and personal projects. Enjoy!" />
+    <meta property="og:image" content="https://www.colegannaway.com/images/cole-website-preview.png">
+    <meta property="og:description"
+        content="Cole Gannaway's personal website displaying his professional work experience, social media links, and personal projects. Enjoy!">
+    <link rel="apple-touch-icon" href="images/cole-website-preview.png" />
+</head>
+
+<body onload="setNavBar()">
+    <!-- mobile -->
+    <nav id="nav1" class="md:hidden fixed w-full text-white z-10">
+        <div class="absolute text-xl top-6 left-1/2 -translate-x-20 font-bold tracking-wide">Cole Gannaway</div>
+        <button class="inline-block float-right w-16 p-4" onclick="toggleMobileNavBarMenu()">
+            <img src="images/Hamburger_icon.svg" alt="">
+        </button>
+    </nav>
+    <!-- non mobile -->
+    <nav id="nav2" class="hidden fixed w-full text-white z-10 p-4 md:block">
+        <div class="float-left text-xl font-bold tracking-wide ml-10 md:ml-20">Cole Gannaway</div>
+        <div class="float-right text-xl mr-10 md:mr-20">
+            <a class="px-2" href="index.html">Home</a>
+            <a class="px-2" href="index.html">Projects</a>
+            <a class="px-2" href="index.html">About Me</a>
+            <a class="px-2" href="index.html">Experience</a>
+        </div>
+    </nav>
+    <nav id="mobileNavBarMenu" class="fixed right-0 left-0 bottom-0 top-0 text-white text-xl z-20"
+        style="background-color: rgba(0, 0, 0, 0.9);" hidden="true">
+        <ul class="block py-10 text-center text-xl my-auto">
+            <li><a class="block px-2 py-2" href="index.html" onclick="toggleMobileNavBarMenu()">Home</a></li>
+            <li><a class="block px-2 py-2" href="index.html" onclick="toggleMobileNavBarMenu()">Projects</a></li>
+            <li><a class="block px-2 py-2" href="index.html" onclick="toggleMobileNavBarMenu()">About Me</a></li>
+            <li><a class="block px-2 py-2" href="index.html" onclick="toggleMobileNavBarMenu()">Experience</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- insert some vertical padding here -->
+    <div class="bg-black pt-16"></div>
+
+    <!-- Black background sections -->
+    <div class="bg-black text-white">
+        <div class="custom-center-content-container">
+            <div class="mx-10">
+                <div class="container mx-auto p-4 text-white">
+                    <div class="max-w-4xl mx-auto px-4 py-8">
+                        <!-- Hero Section -->
+                        <div class="text-center mb-12">
+                            <h1 class="text-5xl font-bold text-gray-800 underline mb-4">
+                                <span
+                                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                                    Cole Gannaway
+                                </span>
+                            </h1>
+                            <p class="text-xl text-white">Digital Transformer | AI Innovator | Fintech Expert</p>
+                        </div>
+
+                        <!-- Introduction Section -->
+                        <div class="bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+                            <h2 class="text-2xl font-bold mb-4">Professional Summary:</h2>
+                            <p class="leading-relaxed">
+                                I've turned failing startups into billion-dollar companies. I've invented time travel (but I'm not telling anyone). I've single-handedly prevented robot uprisings and mended relationships between humans and robots.
+                                <br>
+                                <br>
+                                In my spare time, I've mastered quantum physics, taught myself to breathe underwater, and trained my dog to write novels.
+                            </p>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+                            <h2 class="text-2xl font-bold mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                Skills
+                            </h2>
+                            <p class=" space-y-2">
+                                <ol class="list-disc">
+                                    <li class="list-item">Time Management (I invented time)</li>
+                                    <li class="list-item">Leadership (I lead galaxies)</li>
+                                    <li class="list-item">Problem Solving (I solved the universe)</li>
+                                    <li class="list-item">Communication (I talk to black holes)</li>
+                                    <li class="list-item">Technical Skills (I'm fluent in all programming languages)</li>
+                                </ol>
+                            </p>
+                        </div>
+
+                        <!-- Experience Section -->
+                        <div class="bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+                            <h2 class="text-2xl font-bold mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v12m0 0l6-6m6 6l-6-6" />
+                                </svg>
+                                Experience
+                            </h2>
+                            <p class="space-y-2">
+                                <ol class="list-disc">
+                                    <li class="list-item">CEO of the Universe (Current)</li>
+                                    <li class="list-item">CTO of the Multiverse (Previous)</li>
+                                    <li class="list-item">Founder of several companies, including "Everything Inc." and "The Answer to Life, the Universe, and Everything.</li>
+                                </ol>
+                            </p>
+                        </div>
+
+                        <!-- Education Section -->
+                        <div class="bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+                            <h2 class="text-2xl font-bold mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                Education
+                            </h2>
+                            <p class="">
+                                Ph.D. in Everything from the University of Life.<br>
+                                Graduated magna cum laude (and also summa cum laude, just because).
+                            </p>
+                        </div>
+
+                        <!-- Note Section -->
+                        <div class="text-center mt-8">
+                            <p class="text-sm italic">
+                                Note: This is a playful representation of my professional journey. The actual
+                                achievements may be even more impressive!
+                            </p>
+                            <p class="text-sm mt-2">
+                                Disclaimer: Legend status subject to ongoing innovation and disruption.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-10">
+
+                <section>
+                    <h2 class="my-4 text-center md:text-xl">Get In Touch</h2>
+                    <div class="my-4 flex flex-auto justify-center">
+                        <a href="https://www.linkedin.com/in/cole-gannaway">
+                            <img class="w-10 h-10 m-auto mx-2" src="images/linkedin-icon.svg">
+                        </a>
+                        <a href="https://github.com/cole-gannaway">
+                            <img class="w-10 h-10 m-auto mx-2" src="images/github-icon.svg"
+                                style="filter: brightness(0) invert(1);">
+                        </a>
+                        <a href="https://www.facebook.com/cole.gannaway">
+                            <img class="w-10 h-10 m-auto mx-2" src="images/facebook-icon.svg">
+                        </a>
+                    </div>
+                    <div class="my-4 text-center">&copy;Cole Gannaway. All Rights Reserved</div>
+                    <div class="h-4"></div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var isAtTop = true;
+        function setNavBar() {
+            var scrollPosition = window.scrollY;
+            if (isAtTop && scrollPosition > 20) {
+                isAtTop = false;
+                document.getElementById("nav1").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                document.getElementById("nav2").style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+            } else if (!isAtTop && scrollPosition <= 20) {
+                isAtTop = true;
+                document.getElementById("nav1").style.backgroundColor = "transparent";
+                document.getElementById("nav2").style.backgroundColor = "transparent";
+            }
+        }
+
+        var isMobileNavBarMenuOpen = false;
+        function toggleMobileNavBarMenu() {
+            console.log(document.getElementById("mobileNavBarMenu").hidden)
+            console.log(isMobileNavBarMenuOpen)
+            if (isMobileNavBarMenuOpen) {
+                // close it
+                document.getElementById("mobileNavBarMenu").hidden = true;
+                isMobileNavBarMenuOpen = false;
+            }
+            else {
+                // open it
+                document.getElementById("mobileNavBarMenu").hidden = false;
+                isMobileNavBarMenuOpen = true;
+            }
+
+
+        }
+
+        // Attach the function to the 'scroll' event
+        window.addEventListener("scroll", setNavBar);
+        const arr = document.getElementById("mobileNavBarMenu").getElementsByTagName("a")
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            element.onclick = toggleMobileNavBarMenu;
+        }
+
+    </script>
+</body>
+
+</html>
