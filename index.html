@@ -72,10 +72,10 @@
                                         <img class="w-64 aspect-square rounded-full md:w-96" src="images/cole-headshot.jpeg">
                                     </div>
                                 </div>
-                                <div id="software-engineer-title" class="font-bold text-xl mb-4">Software Engineer</div>
-                                <div id="sales-engineer-title" class="font-bold text-xl mb-4 hidden">Sales Engineer</div>
+                                <div id="software-engineer-title" class="font-bold text-xl mb-4 hidden">Software Engineer</div>
+                                <div id="solutions-engineer-title" class="font-bold text-xl mb-4">Majors Solutions Engineer</div>
                                 <div id="tagline-text" class="italic md:text-xl">
-                                    I solve the most complex challenges by architecting world class <span class="font-extrabold">software</span> and <span class="font-extrabold">IT</span> solutions.
+                                    Connecting elite technology capabilities to revenue acceleration.
                                 </div>
                             </div>
                         </div>
@@ -519,10 +519,10 @@
     <script>
         var tl = gsap.timeline({delay: 0.5});
         const myText2 = new SplitType('#software-engineer-title')
-        const myText3 = new SplitType('#sales-engineer-title')
+        const myText3 = new SplitType('#solutions-engineer-title')
         const myText4 = new SplitType('#tagline-text')
         const myText5 = new SplitType('#projects-section-title')
-        tl.to('#software-engineer-title .char', {
+        tl.to('#solutions-engineer-title .char', {
             y: 0,
             stagger: 0.05,
             delay: 0.2,
@@ -543,22 +543,22 @@
 
         // new timeline
         var tl2 = gsap.timeline({paused: true, repeat: -1});
-        tl2.to('#software-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
-            .to('#sales-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
-        tl2.to("#software-engineer-title", {display:"none", duration: 0})
-            .to("#sales-engineer-title", {display:"block", duration: 0})
-        tl2.to('#sales-engineer-title .char', {
+        tl2.to('#solutions-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#software-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#solutions-engineer-title", {display:"none", duration: 0})
+            .to("#software-engineer-title", {display:"block", duration: 0})
+        tl2.to('#software-engineer-title .char', {
             y: 0,
             stagger: 0.05,
             delay: 0.2,
             duration: .1,
         })
 
-        tl2.to('#sales-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
-            .to('#software-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
-        tl2.to("#sales-engineer-title", {display:"none", duration: 0})
-            .to("#software-engineer-title", {display:"block", duration: 0})
-        tl2.to('#software-engineer-title .char', {
+        tl2.to('#software-engineer-title .char', {y:"-200%", delay: 1, duration: 0.25})
+            .to('#solutions-engineer-title .char', {y:"200%", delay: 1, duration: 0.25})
+        tl2.to("#software-engineer-title", {display:"none", duration: 0})
+            .to("#solutions-engineer-title", {display:"block", duration: 0})
+        tl2.to('#solutions-engineer-title .char', {
             y: 0,
             stagger: 0.05,
             delay: 0.2,
