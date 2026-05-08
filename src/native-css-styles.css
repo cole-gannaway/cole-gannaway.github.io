@@ -14,7 +14,7 @@
     color: aquamarine;
 }
 
-#sales-engineer-title {
+#solutions-engineer-title {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     color: #FFBE7B;
 }
@@ -27,7 +27,7 @@
     opacity: 0;
 }
 
-#software-engineer-title .char, #sales-engineer-title .char, #projects-section-title .char {
+#software-engineer-title .char, #solutions-engineer-title .char, #projects-section-title .char {
     transform: translateY(100%);
     transition: transform .5s;
 }
